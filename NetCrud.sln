@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3AD5F822-801F-4484-BE11-DDB5CBD87C4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCrud.Domain", "NetCrud.Domain", "{9F4EE3B0-5CCB-49F7-A8AB-1EB778E2BDE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCrud.Domain", "src\NetCrud.Domain\NetCrud.Domain\NetCrud.Domain.csproj", "{6268A112-D361-475F-87ED-5C69300222A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCrud.Infrastructure", "NetCrud.Infrastructure", "{BCC05EAD-39B4-4AD7-AAF2-9AE6EB6B9C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCrud.Infrastructure", "src\NetCrud.Infrastructure\NetCrud.Infrastructure\NetCrud.Infrastructure.csproj", "{18FE7ED7-34C1-42CF-B311-71F4C1568FD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCrud.Application", "NetCrud.Application", "{827CABE4-30F9-4A97-9EAD-EDC5B4E1D52D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCrud.Application", "src\NetCrud.Application\NetCrud.Application\NetCrud.Application.csproj", "{E560AC49-0B38-42F2-BBDE-79090971CD02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCrud.API", "NetCrud.API", "{04E6E0B0-E945-4E75-B18E-61AED72B9F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCrud.API", "src\NetCrud.API\NetCrud.API\NetCrud.API.csproj", "{D70F6C42-E7F6-4E48-ADA1-02B2216BBC22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6268A112-D361-475F-87ED-5C69300222A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6268A112-D361-475F-87ED-5C69300222A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6268A112-D361-475F-87ED-5C69300222A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6268A112-D361-475F-87ED-5C69300222A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FE7ED7-34C1-42CF-B311-71F4C1568FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FE7ED7-34C1-42CF-B311-71F4C1568FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FE7ED7-34C1-42CF-B311-71F4C1568FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FE7ED7-34C1-42CF-B311-71F4C1568FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E560AC49-0B38-42F2-BBDE-79090971CD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E560AC49-0B38-42F2-BBDE-79090971CD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E560AC49-0B38-42F2-BBDE-79090971CD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E560AC49-0B38-42F2-BBDE-79090971CD02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70F6C42-E7F6-4E48-ADA1-02B2216BBC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70F6C42-E7F6-4E48-ADA1-02B2216BBC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70F6C42-E7F6-4E48-ADA1-02B2216BBC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70F6C42-E7F6-4E48-ADA1-02B2216BBC22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F4EE3B0-5CCB-49F7-A8AB-1EB778E2BDE4} = {3AD5F822-801F-4484-BE11-DDB5CBD87C4A}
+		{6268A112-D361-475F-87ED-5C69300222A4} = {9F4EE3B0-5CCB-49F7-A8AB-1EB778E2BDE4}
+		{BCC05EAD-39B4-4AD7-AAF2-9AE6EB6B9C19} = {3AD5F822-801F-4484-BE11-DDB5CBD87C4A}
+		{18FE7ED7-34C1-42CF-B311-71F4C1568FD4} = {BCC05EAD-39B4-4AD7-AAF2-9AE6EB6B9C19}
+		{827CABE4-30F9-4A97-9EAD-EDC5B4E1D52D} = {3AD5F822-801F-4484-BE11-DDB5CBD87C4A}
+		{E560AC49-0B38-42F2-BBDE-79090971CD02} = {827CABE4-30F9-4A97-9EAD-EDC5B4E1D52D}
+		{04E6E0B0-E945-4E75-B18E-61AED72B9F78} = {3AD5F822-801F-4484-BE11-DDB5CBD87C4A}
+		{D70F6C42-E7F6-4E48-ADA1-02B2216BBC22} = {04E6E0B0-E945-4E75-B18E-61AED72B9F78}
+	EndGlobalSection
+EndGlobal
