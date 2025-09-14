@@ -42,14 +42,19 @@ NetCrud/
    ```sql
    CREATE DATABASE NetCrudDB;
    ```
-3. **Update Connection String** in `appsettings.json`:
-   ```json
-   {
-     "ConnectionStrings": {
-       "DefaultConnection": "Server=localhost;Database=NetCrudDB;Uid=root;Pwd=breitling;Port=3306;"
-     }
-   }
+3. **Configure Environment Variables**:
+
+   **Using .env file (Required):**
+
+   ```bash
+   # Copy the example file
+   cp .env.example .env
+
+   # Edit with your credentials
+   nano .env
    ```
+
+   **Note:** The application uses environment variables for database configuration. The `appsettings.json` files do not contain connection strings for security reasons.
 
 ## 🚀 Getting Started
 
@@ -68,11 +73,17 @@ NetCrud/
 
 3. **Configure database connection**:
 
+   **Using .env file (Required)**
+
    ```bash
-   cd src/NetCrud.API/NetCrud.API
-   dotnet user-secrets init
-   dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Server=localhost;Database=NetCrudDB;Uid=root;Pwd=YOUR_PASSWORD;Port=3306;"
+   # Copy the example file
+   cp .env.example .env
+
+   # Edit .env with your database credentials
+   nano .env
    ```
+
+   **Note:** The application requires a `.env` file for database configuration. User Secrets are not supported in this setup.
 
 4. **Update database**:
 
@@ -97,10 +108,39 @@ NetCrud/
    - API: `http://localhost:5151`
    - Swagger UI: `http://localhost:5151/` (root URL)
 
+## 🔐 Environment Configuration
+
+The application uses environment variables for all configuration:
+
+### .env File (Required)
+
+Create a `.env` file in the project root:
+
+```bash
+# Database Configuration
+DB_SERVER=localhost
+DB_DATABASE=NetCrudDB
+DB_USERNAME=root
+DB_PASSWORD=your_password_here
+DB_PORT=3306
+```
+
+### Configuration Flow
+
+1. **`.env` file** loads environment variables
+2. **`Program.cs`** builds connection string from environment variables
+3. **`appsettings.json`** files contain only non-sensitive configuration (logging, etc.)
+
+### Security Notes
+
+- The `.env` file is automatically ignored by Git (see `.gitignore`)
+- Never commit sensitive credentials to version control
+- Use `.env.example` as a template for other developers
+- Connection strings are not stored in `appsettings.json` files
+
 ## ⚡ Performance Tips
 
 - **Use `dotnet watch`** for development - automatically restarts on changes
-- **Use the provided scripts** (`./start.sh` or `./dev.sh`) for faster startup
 - **Keep the app running** during development to avoid rebuild times
 - **Use `dotnet build`** instead of `dotnet run` to check for errors without starting
 

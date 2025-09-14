@@ -8,7 +8,8 @@ DotNetEnv.Env.Load(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Override connection string with environment variables
+// Build connection string from environment variables (.env file)
+// This overrides any connection string in appsettings.json
 var connectionString = $"Server={Environment.GetEnvironmentVariable("DB_SERVER") ?? "localhost"};" +
                       $"Database={Environment.GetEnvironmentVariable("DB_DATABASE") ?? "NetCrudDB"};" +
                       $"Uid={Environment.GetEnvironmentVariable("DB_USERNAME") ?? "root"};" +
